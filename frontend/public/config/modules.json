@@ -1,0 +1,16 @@
+{
+  "order": ["core", "process", "network", "memory", "signal", "archive", "detection", "system-log", "prototype", "messages", "settings"],
+  "modules": {
+    "core": { "label": "CORE", "code": "00" },
+    "process": { "label": "PROCESS", "code": "01" },
+    "network": { "label": "NETWORK", "code": "02" },
+    "memory": { "label": "MEMORY", "code": "03" },
+    "signal": { "label": "SIGNAL", "code": "04" },
+    "archive": { "label": "ARCHIVE", "code": "05" },
+    "detection": { "label": "DETECTION", "code": "06" },
+    "system-log": { "label": "SYSTEM LOG", "code": "07" },
+    "prototype": { "label": "PROTOTYPE", "code": "08" },
+    "messages": { "label": "MESSAGES", "code": "09" },
+    "settings": { "label": "SETTINGS", "code": "10" }
+  }
+}

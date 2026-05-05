@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NeuroCore // MAINFRAME: access the system beneath the system."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+    <title>NeuroCore // MAINFRAME</title>
+  </head>
+  <body>
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+    <audio id="ambient-track" preload="auto" loop>
+      <source src="/assets/sounds/scary-519914.mp3" type="audio/mpeg" />
+      <source src="/assets/sounds/mainframe-ambient.wav" type="audio/wav" />
+    </audio>
+    <div id="cursor-field" aria-hidden="true"></div>
+    <div class="fracture-overlay" aria-hidden="true">
+      <svg viewBox="0 0 1000 700" preserveAspectRatio="none">
+        <g class="fracture-lines">
+          <path d="M -25 331 C 48 331 93 340 142 372 C 186 401 221 441 263 481 C 336 550 392 612 454 681" />
+          <path d="M -12 219 C 56 236 101 252 151 292 C 189 323 207 353 247 382 C 298 421 356 432 419 467" />
+          <path d="M 34 -20 C 85 48 118 96 151 151 C 187 210 213 271 247 382" />
+          <path d="M 135 -20 C 157 64 180 149 213 221 C 235 269 250 319 247 382" />
+          <path d="M 252 -20 C 243 72 239 153 247 235 C 251 283 249 331 247 382" />
+          <path d="M 247 382 C 302 347 350 313 405 288 C 473 256 534 236 602 209 C 748 151 859 103 1025 41" />
+          <path d="M 247 382 C 318 378 393 380 462 394 C 531 408 587 438 649 482 C 735 543 807 608 899 720" />
+          <path d="M 405 288 C 382 236 360 187 337 137 C 316 91 300 40 284 -22" />
+          <path d="M 405 288 C 433 239 466 190 498 139 C 528 92 554 44 585 -18" />
+          <path d="M 602 209 C 626 276 650 338 677 399 C 704 462 736 523 769 592" />
+          <path d="M 649 482 C 705 445 760 410 825 379 C 884 352 938 327 1027 286" />
+          <path d="M 151 151 C 101 124 54 105 -23 84" />
+          <path d="M 151 151 C 104 178 60 207 -12 263" />
+          <path d="M 419 467 C 384 518 350 569 318 632" />
+          <path d="M 677 399 C 735 374 781 341 838 294" />
+        </g>
+        <g class="fracture-glints">
+          <path d="M 229 363 L 247 382 L 218 391 Z" />
+          <path d="M 388 281 L 405 288 L 383 304 Z" />
+          <path d="M 631 467 L 649 482 L 621 494 Z" />
+          <path d="M 665 389 L 677 399 L 657 411 Z" />
+        </g>
+      </svg>
+    </div>
+    <div id="static-break" class="static-break" aria-hidden="true"></div>
+    <div id="boot-screen" class="boot-screen" aria-live="polite">
+      <div class="boot-grid"></div>
+      <div class="boot-core">
+        <img class="boot-logo" src="/assets/logo.svg" alt="NeuroCore mark" />
+        <p class="boot-kicker">NEUROCORE // MAINFRAME</p>
+        <div id="boot-output" class="boot-output"></div>
+        <div class="boot-progress" role="progressbar" aria-label="System initialization">
+          <span id="boot-bar"></span>
+        </div>
+        <div id="boot-status" class="boot-status">Awaiting neural handshake...</div>
+      </div>
+    </div>
+    <main id="app" class="app is-locked" aria-label="NeuroCore mainframe">
+      <aside class="sidebar" aria-label="System modules">
+        <a class="brand" href="/" data-home-link aria-label="NeuroCore home">
+          <img src="/assets/logo.svg" alt="" />
+          <span>
+            <strong>NeuroCore</strong>
+            <small>MAINFRAME</small>
+          </span>
+        </a>
+        <nav id="module-nav" class="module-nav" aria-label="Main navigation"></nav>
+        <button id="reboot-btn" class="ghost-button" type="button" data-tooltip="Replay the cinematic boot sequence">REBOOT</button>
+      </aside>
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">SECURE CHANNEL // ALPHA</p>
+            <h2 id="module-title">CORE</h2>
+          </div>
+          <div class="status-cluster">
+            <span class="status-pill" data-tooltip="Backend link and command surface are online"><i></i> ONLINE</span>
+            <span class="status-pill cyan" data-tooltip="System pressure is within stable operating range">STABLE</span>
+            <span id="clock" class="clock" data-tooltip="Local operator time">00:00:00</span>
+            <div id="audio-control" class="audio-control">
+              <input id="audio-volume" type="range" min="0" max="100" value="32" aria-label="Ambient volume" data-tooltip="Ambient music volume" />
+              <button id="audio-toggle" class="audio-toggle" type="button" data-tooltip="Toggle ambient audio">MUTED</button>
+            </div>
+            <span class="connection" aria-label="Connection strength">
+              <b></b><b></b><b></b><b></b>
+            </span>
+          </div>
+        </header>
+        <section id="module-root" class="module-root" tabindex="-1"></section>
+      </section>
+      <aside class="right-rail" aria-label="Live system telemetry">
+        <div class="rail-panel">
+          <h3>Activity Feed</h3>
+          <div id="mini-log" class="mini-log"></div>
+        </div>
+        <div class="rail-panel">
+          <h3>Signal Trace</h3>
+          <canvas id="rail-scope" width="260" height="130"></canvas>
+          <div class="rail-knobs" aria-label="Signal trace controls">
+            <label data-tooltip="Control the trace height"><span>HGT</span><input type="range" min="35" max="220" value="100" data-rail-knob="amplitude" data-range-unit="%" /><b class="range-value" data-range-output>100%</b></label>
+            <label data-tooltip="Control the trace frequency"><span>FRQ</span><input type="range" min="45" max="240" value="100" data-rail-knob="frequency" data-range-unit="%" /><b class="range-value" data-range-output>100%</b></label>
+            <label data-tooltip="Control trace distortion"><span>DRF</span><input type="range" min="0" max="220" value="75" data-rail-knob="noise" data-range-unit="%" /><b class="range-value" data-range-output>75%</b></label>
+          </div>
+        </div>
+        <div class="rail-panel command-panel">
+          <h3>Command Line</h3>
+          <form id="command-form">
+            <label class="sr-only" for="command-input">Hidden command input</label>
+            <input id="command-input" autocomplete="off" placeholder="type: help" data-tooltip="Enter hidden commands like help, pulse, network, or quiet" />
+            <button type="submit" data-tooltip="Send command to the Rust backend">RUN</button>
+          </form>
+          <p id="command-result">Awaiting operator input.</p>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

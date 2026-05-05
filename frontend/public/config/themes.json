@@ -1,0 +1,104 @@
+{
+  "default": {
+    "name": "Crimson Mainframe",
+    "vars": {
+      "--green": "#ff2d55",
+      "--cyan": "#00ff88",
+      "--purple": "#a070ff",
+      "--text": "#ffe4ea",
+      "--muted": "#b98591",
+      "--line": "rgba(255, 45, 85, 0.24)",
+      "--line-strong": "rgba(255, 45, 85, 0.55)",
+      "--panel": "rgba(20, 3, 7, 0.78)",
+      "--panel-strong": "rgba(28, 0, 8, 0.94)",
+      "--theme-rgb": "255, 45, 85",
+      "--accent-rgb": "0, 255, 136",
+      "--theme-hue": "0deg"
+    }
+  },
+  "matrix": {
+    "name": "Green Matrix",
+    "vars": {
+      "--green": "#00ff88",
+      "--cyan": "#7cffd1",
+      "--purple": "#9affb8",
+      "--text": "#dcfff1",
+      "--muted": "#82b7a1",
+      "--line": "rgba(0, 255, 136, 0.24)",
+      "--line-strong": "rgba(0, 255, 136, 0.58)",
+      "--panel": "rgba(1, 20, 11, 0.82)",
+      "--panel-strong": "rgba(0, 32, 17, 0.94)",
+      "--theme-rgb": "0, 255, 136",
+      "--accent-rgb": "124, 255, 209",
+      "--theme-hue": "96deg"
+    }
+  },
+  "violet": {
+    "name": "Violet Blacksite",
+    "vars": {
+      "--green": "#b66cff",
+      "--cyan": "#00ff88",
+      "--purple": "#ff4fd8",
+      "--text": "#f5e8ff",
+      "--muted": "#b697c8",
+      "--line": "rgba(182, 108, 255, 0.24)",
+      "--line-strong": "rgba(182, 108, 255, 0.58)",
+      "--panel": "rgba(18, 4, 30, 0.82)",
+      "--panel-strong": "rgba(25, 3, 44, 0.95)",
+      "--theme-rgb": "182, 108, 255",
+      "--accent-rgb": "0, 255, 136",
+      "--theme-hue": "42deg"
+    }
+  },
+  "amber": {
+    "name": "Amber Reactor",
+    "vars": {
+      "--green": "#ffb000",
+      "--cyan": "#00ff88",
+      "--purple": "#ff5c35",
+      "--text": "#fff1d2",
+      "--muted": "#c9a968",
+      "--line": "rgba(255, 176, 0, 0.28)",
+      "--line-strong": "rgba(255, 176, 0, 0.62)",
+      "--panel": "rgba(27, 14, 0, 0.82)",
+      "--panel-strong": "rgba(44, 22, 0, 0.95)",
+      "--theme-rgb": "255, 176, 0",
+      "--accent-rgb": "0, 255, 136",
+      "--theme-hue": "150deg"
+    }
+  },
+  "arctic": {
+    "name": "Arctic Signal",
+    "vars": {
+      "--green": "#63f2ff",
+      "--cyan": "#00ff88",
+      "--purple": "#8ab4ff",
+      "--text": "#e7fbff",
+      "--muted": "#8fb6c1",
+      "--line": "rgba(99, 242, 255, 0.26)",
+      "--line-strong": "rgba(99, 242, 255, 0.62)",
+      "--panel": "rgba(0, 18, 24, 0.84)",
+      "--panel-strong": "rgba(0, 29, 38, 0.95)",
+      "--theme-rgb": "99, 242, 255",
+      "--accent-rgb": "0, 255, 136",
+      "--theme-hue": "210deg"
+    }
+  },
+  "whiteout": {
+    "name": "Whiteout Lab",
+    "vars": {
+      "--green": "#f6f7ff",
+      "--cyan": "#00ff88",
+      "--purple": "#ff2d55",
+      "--text": "#ffffff",
+      "--muted": "#bfc4d1",
+      "--line": "rgba(246, 247, 255, 0.28)",
+      "--line-strong": "rgba(246, 247, 255, 0.68)",
+      "--panel": "rgba(20, 21, 26, 0.84)",
+      "--panel-strong": "rgba(32, 34, 42, 0.96)",
+      "--theme-rgb": "246, 247, 255",
+      "--accent-rgb": "0, 255, 136",
+      "--theme-hue": "300deg"
+    }
+  }
+}

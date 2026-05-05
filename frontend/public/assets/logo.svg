@@ -1,0 +1,24 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="48" fill="#000000"/>
+  <circle cx="128" cy="128" r="92" stroke="#FF2D55" stroke-width="6" stroke-dasharray="34 14"/>
+  <circle cx="128" cy="128" r="62" stroke="#00FF88" stroke-opacity=".72" stroke-width="3"/>
+  <path d="M72 132h26l17-34 27 60 18-36h24" stroke="#FF2D55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 82h32l44 92h-31L91 82Z" fill="#FF2D55" fill-opacity=".16"/>
+  <path d="M90 174V82h24l52 92h-27l-26-48v48H90Z" fill="#ffe4ea"/>
+  <path d="M155 82h18v38h-18V82ZM155 138h18v36h-18v-36Z" fill="#FF2D55"/>
+  <circle cx="128" cy="128" r="11" fill="#FF2D55"/>
+  <circle cx="128" cy="128" r="21" stroke="#FF2D55" stroke-opacity=".44" stroke-width="2"/>
+  <g filter="url(#glow)">
+    <circle cx="128" cy="128" r="104" stroke="#FF2D55" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M128 22v28M128 206v28M22 128h28M206 128h28" stroke="#00FF88" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <filter id="glow" x="-20" y="-20" width="296" height="296" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
