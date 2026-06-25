@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A cinematic full-stack mainframe interface with a separated Vite frontend and Rust backend.",
   "type": "module",
-  "private": true,
+  "private": false,
   "workspaces": [
     "frontend"
   ],
